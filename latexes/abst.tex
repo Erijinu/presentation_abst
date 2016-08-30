@@ -1,0 +1,30 @@
+\documentclass[10pt,a4j,twocolumn]{jsarticle}
+
+\usepackage[dvipdfmx]{graphicx}
+
+\setlength{\textheight}{275mm}
+\headheight 5mm
+\topmargin -30mm
+\textwidth 185mm
+\oddsidemargin -15mm
+\evensidemargin -15mm
+\pagestyle{empty}
+\begin{document}
+\title{RubyでMapleを動かすインターフェースの開発}
+\author{情報科学科 西谷研究室 3528 村瀬愛理}
+\date{}
+\maketitle
+\section{開発の背景}
+Rubyでは数値計算のライブラリ開発が遅れており，Ruby上では高等な関数(素数を求めたり，最小公倍数を求めるなど)を使った数式処理を行うのが難しい．
+また，Ruby以外の数式処理ソフトウェアを別に立ち上げて別々で作業するよりもRubyのみで作業する方が，喧嘩との比較も容易である．
+そこで数式処理ソフトウェアの１つであるMapleをRuby上で呼び出し，Rubyを通してMapleで計算を行いその結果をRubyで表示させるインターフェースを開発することが本研究である．
+
+\section{手法}
+Rubyで要求コードを受け取った後，そのコードをtmp.mwに書き込んだ後それをMapleで実行し，結果をテキストファイルで受けとる．
+
+\section{課題}\begin{itemize}
+\item 直接コマンド内に数値を入れて実行すると動作するが，コマンドと数値をを分けて実行した場合動かない．よって，現状変数に数値を入れた状態でその変数を用いてプログラムを実行することができない状態になっている．
+\item lcm(最小公倍数)のような関数は引数に数値が2つある場合の処理の方法.
+\end{itemize}
+\section{進捗状況}
+\end{document}
